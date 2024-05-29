@@ -1,4 +1,4 @@
-import 'package:app_kairov/src/widget/ticket_card.dart';
+import 'package:app_kairov/src/components/ticket_card_widget/ticket_card.dart';
 import 'package:flutter/material.dart';
 
 class Tickets extends StatefulWidget {

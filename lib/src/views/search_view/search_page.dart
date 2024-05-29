@@ -1,8 +1,8 @@
-import 'package:app_kairov/src/widget/destination_card.dart';
-import 'package:app_kairov/src/widget/route.dart';
+import 'package:app_kairov/src/components/destination_card_widget/destination_card.dart';
+import 'package:app_kairov/src/components/route_widget/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:app_kairov/src/home/sochi_page.dart';
+import 'package:app_kairov/src/views/palase_view/sochi_page.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});

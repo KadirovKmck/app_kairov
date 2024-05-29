@@ -1,4 +1,4 @@
-import 'package:app_kairov/src/home/price_chart.dart';
+import 'package:app_kairov/src/views/price_chart_view/price_chart.dart';
 import 'package:flutter/material.dart';
 
 class TicketCard extends StatelessWidget {

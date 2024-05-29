@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class Filter extends StatefulWidget {
   const Filter({super.key});
@@ -10,9 +8,6 @@ class Filter extends StatefulWidget {
 }
 
 class _FilterState extends State<Filter> {
-  bool isSwitched = false;
-  bool isSwit = false;
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -168,4 +163,7 @@ class _FilterState extends State<Filter> {
       ),
     );
   }
+
+  bool isSwitched = false;
+  bool isSwit = false;
 }

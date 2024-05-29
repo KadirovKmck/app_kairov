@@ -1,39 +1,16 @@
+import 'package:app_kairov/src/components/ticket_item_widget/ticket_Item.dart';
 import 'package:flutter/material.dart';
-import 'package:app_kairov/src/home/filter.dart';
-import 'package:app_kairov/src/widget/ticket_item.dart';
-import 'tickets_page.dart';
+import 'package:app_kairov/src/views/filter_view/filter.dart';
+import '../ticket_view/tickets_page.dart';
 
 class SochiPage extends StatefulWidget {
-  const SochiPage({super.key, Key});
+  const SochiPage({super.key});
 
   @override
   _SochiPageState createState() => _SochiPageState();
 }
 
 class _SochiPageState extends State<SochiPage> {
-  List<String> texts = [
-    '+ обратно',
-    '24 фев, сб',
-    '1, эконом',
-    'фильтры',
-  ];
-
-  bool isSwitched = false;
-
-  void _navigateToFilterPage() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Filter()),
-    );
-  }
-
-  void _navigateToTicketsPage() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const Tickets()),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -274,6 +251,29 @@ class _SochiPageState extends State<SochiPage> {
           ],
         ),
       ),
+    );
+  }
+
+  List<String> texts = [
+    '+ обратно',
+    '24 фев, сб',
+    '1, эконом',
+    'фильтры',
+  ];
+
+  bool isSwitched = false;
+
+  void _navigateToFilterPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const Filter()),
+    );
+  }
+
+  void _navigateToTicketsPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const Tickets()),
     );
   }
 }

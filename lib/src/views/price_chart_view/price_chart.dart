@@ -8,8 +8,6 @@ class PriceChart extends StatefulWidget {
 }
 
 class _PriceChartState extends State<PriceChart> {
-  bool addBaggage = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -405,4 +403,6 @@ class _PriceChartState extends State<PriceChart> {
       ),
     );
   }
+
+  bool addBaggage = false;
 }

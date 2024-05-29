@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class DestinationTile extends StatefulWidget {
@@ -19,24 +21,6 @@ class DestinationTile extends StatefulWidget {
 }
 
 class _DestinationTileState extends State<DestinationTile> {
-  bool _isTapped = false;
-
-  void _handleTap() {
-    setState(() {
-      _isTapped = true;
-    });
-
-    Future.delayed(const Duration(milliseconds: 100), () {
-      setState(() {
-        _isTapped = false;
-      });
-    });
-
-    if (widget.onTap != null) {
-      widget.onTap!();
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -92,5 +76,23 @@ class _DestinationTileState extends State<DestinationTile> {
         ],
       ),
     );
+  }
+
+  bool _isTapped = false;
+
+  void _handleTap() {
+    setState(() {
+      _isTapped = true;
+    });
+
+    Future.delayed(const Duration(milliseconds: 100), () {
+      setState(() {
+        _isTapped = false;
+      });
+    });
+
+    if (widget.onTap != null) {
+      widget.onTap!();
+    }
   }
 }
