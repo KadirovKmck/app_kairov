@@ -1,13 +1,14 @@
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
-class Filter extends StatefulWidget {
-  const Filter({super.key});
+class CostomTabbar extends StatefulWidget {
+  const CostomTabbar({super.key});
 
   @override
-  State<Filter> createState() => _FilterState();
+  State<CostomTabbar> createState() => _CostomTabbarState();
 }
 
-class _FilterState extends State<Filter> {
+class _CostomTabbarState extends State<CostomTabbar> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,30 +36,14 @@ class _FilterState extends State<Filter> {
                         color: Colors.white,
                       ),
                     ),
-                    const Text(
-                      'Фильтры',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'SF Pro Display',
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    const Text('Фильтры', style: AppTextStyle.wite18w600),
                   ],
                 ),
               ),
             ),
             const Padding(
               padding: EdgeInsets.only(right: 290, top: 25),
-              child: Text(
-                'Пересадки',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
-                  fontFamily: 'SF Pro Display',
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
+              child: Text('  Пересадки', style: AppTextStyle.wite18w600),
             ),
             const SizedBox(
               height: 20,
@@ -73,15 +58,7 @@ class _FilterState extends State<Filter> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    const Text(
-                      'Без пересадок',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontFamily: 'SF Pro Display',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
+                    const Text('Без пересадок', style: AppTextStyle.wite16w600),
                     const SizedBox(
                       width: 60,
                     ),
@@ -111,16 +88,8 @@ class _FilterState extends State<Filter> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text(
-                    'Только с багажом',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'SF Pro Display',
-                      fontWeight: FontWeight.w400,
-                      height: 0.07,
-                    ),
-                  ),
+                  const Text('Только с багажом',
+                      style: AppTextStyle.wite16w600),
                   const SizedBox(
                     width: 55,
                   ),
@@ -148,15 +117,7 @@ class _FilterState extends State<Filter> {
                 height: 50,
                 width: 380,
                 child: const Center(
-                  child: Text(
-                    'Готово',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'SF Pro Display',
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                  child: Text('Готово', style: AppTextStyle.wite16w600),
                 )),
           ],
         ),

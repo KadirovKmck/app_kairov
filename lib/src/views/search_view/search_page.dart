@@ -1,5 +1,7 @@
-import 'package:app_kairov/src/components/destination_card_widget/destination_card.dart';
-import 'package:app_kairov/src/components/route_widget/route.dart';
+import 'package:app_kairov/src/core/ui/theme/app_decoration.dart';
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
+import 'package:app_kairov/src/core/ui/widgets/destination_card_widget/destination_card.dart';
+import 'package:app_kairov/src/core/ui/widgets/route_widget/route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:app_kairov/src/views/palase_view/sochi_page.dart';
@@ -26,12 +28,7 @@ class _SearchState extends State<Search> {
                 width: 385,
                 height: 110,
                 clipBehavior: Clip.antiAlias,
-                decoration: ShapeDecoration(
-                  color: const Color(0xFF2F3035),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
+                decoration: AppDecoration.blac50R16Box4,
                 child: Stack(
                   children: [
                     Positioned(
@@ -48,15 +45,8 @@ class _SearchState extends State<Search> {
                             ),
                           ),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Куда - Турция',
-                            style: TextStyle(
-                              color: Color(0xFF9E9E9E),
-                              fontSize: 16,
-                              fontFamily: 'SF Pro Display',
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          const Text('Куда - Турция',
+                              style: AppTextStyle.wite7016w600),
                         ],
                       ),
                     ),
@@ -98,15 +88,7 @@ class _SearchState extends State<Search> {
                             ),
                           ),
                           const SizedBox(width: 8),
-                          const Text(
-                            'Минск',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'SF Pro Display',
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
+                          const Text('Минск', style: AppTextStyle.wite16w600),
                         ],
                       ),
                     ),
@@ -146,12 +128,7 @@ class _SearchState extends State<Search> {
             child: Container(
               height: 260,
               padding: const EdgeInsets.all(16),
-              decoration: ShapeDecoration(
-                color: const Color(0xFF2F3035),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
+              decoration: AppDecoration.blacR16,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[

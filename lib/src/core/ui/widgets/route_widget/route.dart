@@ -1,3 +1,4 @@
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -39,16 +40,8 @@ class RouteWidget extends StatelessWidget {
           const SizedBox(height: 8),
           SizedBox(
             width: 70,
-            child: Text(
-              title,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 14,
-                fontFamily: 'SF Pro Display',
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+            child: Text(title,
+                textAlign: TextAlign.center, style: AppTextStyle.wite14w600),
           ),
         ],
       ),

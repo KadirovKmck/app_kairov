@@ -1,3 +1,5 @@
+import 'package:app_kairov/src/core/ui/theme/app_decoration.dart';
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
 import 'package:flutter/material.dart';
 
 class PriceChart extends StatefulWidget {
@@ -38,10 +40,7 @@ class _PriceChartState extends State<PriceChart> {
           children: [
             Container(
               padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                color: const Color(0xFF2A2A2A),
-                borderRadius: BorderRadius.circular(8),
-              ),
+              decoration: AppDecoration.blac100R30Box4,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -71,12 +70,8 @@ class _PriceChartState extends State<PriceChart> {
                               TextSpan(
                                 children: [
                                   TextSpan(
-                                    text: 'Добавить багаж ',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 16,
-                                    ),
-                                  ),
+                                      text: 'Добавить багаж ',
+                                      style: AppTextStyle.witefs16),
                                   TextSpan(
                                     text: '+ 1 082 ₽ ',
                                     style: TextStyle(
@@ -109,11 +104,8 @@ class _PriceChartState extends State<PriceChart> {
                         const Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            Text(
-                              '      Изменить обмен или возврат',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 255, 255, 255)),
-                            ),
+                            Text('     Изменить обмен или возврат ',
+                                style: AppTextStyle.witefs16),
                             Icon(
                               Icons.chevron_right_sharp,
                               color: Color.fromARGB(255, 30, 103, 163),
@@ -127,14 +119,9 @@ class _PriceChartState extends State<PriceChart> {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Москва-Сочи',
-              style: TextStyle(color: Colors.white, fontSize: 18),
-            ),
-            const Text(
-              '04ч в пути',
-              style: TextStyle(color: Colors.grey),
-            ),
+            const Text('Москва-Сочи',
+                style: TextStyle(color: Colors.white, fontSize: 18)),
+            const Text('04ч в пути', style: TextStyle(color: Colors.grey)),
             const SizedBox(height: 10),
             Card(
               color: const Color(0xFF2A2A2A),
@@ -158,19 +145,11 @@ class _PriceChartState extends State<PriceChart> {
                           TextSpan(
                             children: [
                               TextSpan(
-                                text: 'Якутия\n',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                ),
-                              ),
+                                  text: 'Якутия\n',
+                                  style: AppTextStyle.wite16w600),
                               TextSpan(
-                                text: '04ч в пути',
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 109, 112, 117),
-                                  fontSize: 16,
-                                ),
-                              ),
+                                  text: '04ч в пути',
+                                  style: AppTextStyle.wite7016w600),
                             ],
                           ),
                         ),
@@ -244,49 +223,32 @@ class _PriceChartState extends State<PriceChart> {
                         const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              '03:15',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              '23 фев, ср       ',
-                              style: TextStyle(color: Colors.grey),
-                            ),
+                            Text('03:15',
+                                style: TextStyle(color: Colors.white)),
+                            Text('23 фев, ср       ',
+                                style: TextStyle(color: Colors.grey)),
                             SizedBox(
                               height: 10,
                             ),
-                            Text(
-                              '07:10',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              '23 фев, ср',
-                              style: TextStyle(color: Colors.grey),
-                            ),
+                            Text('07:10',
+                                style: TextStyle(color: Colors.white)),
+                            Text('23 фев, ср',
+                                style: TextStyle(color: Colors.grey)),
                           ],
                         ),
                         const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              'Москва',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              'Внуково, VKO',
-                              style: TextStyle(color: Colors.grey),
-                            ),
+                            Text('Москва',
+                                style: TextStyle(color: Colors.white)),
+                            Text('Внуково, VKO',
+                                style: TextStyle(color: Colors.grey)),
                             SizedBox(
                               height: 10,
                             ),
-                            Text(
-                              'Сочи',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                            Text(
-                              'Адлер, AER',
-                              style: TextStyle(color: Colors.grey),
-                            ),
+                            Text('Сочи', style: TextStyle(color: Colors.white)),
+                            Text('Адлер, AER',
+                                style: TextStyle(color: Colors.grey)),
                           ],
                         )
                       ],
@@ -299,11 +261,7 @@ class _PriceChartState extends State<PriceChart> {
               height: 74.5,
             ),
             Container(
-              decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 92, 91, 91),
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10))),
+              decoration: AppDecoration.blac50Rl10r10,
               height: 100,
               width: double.infinity,
               child: Padding(
@@ -311,18 +269,10 @@ class _PriceChartState extends State<PriceChart> {
                 child: Column(
                   children: [
                     Container(
-                      width: 38,
-                      height: 5,
-                      decoration: ShapeDecoration(
-                        color: const Color.fromARGB(255, 116, 117, 118),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
+                        width: 38,
+                        height: 5,
+                        decoration: AppDecoration.blacR30Box4),
+                    const SizedBox(height: 15),
                     Row(
                       children: [
                         const CircleAvatar(
@@ -338,19 +288,11 @@ class _PriceChartState extends State<PriceChart> {
                           TextSpan(
                             children: [
                               TextSpan(
-                                text: '6 310 ₽\n',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 19,
-                                    fontWeight: FontWeight.w600),
-                              ),
+                                  text: '6 310 ₽\n',
+                                  style: AppTextStyle.wite18w600),
                               TextSpan(
-                                text: 'На сайте Купибилет',
-                                style: TextStyle(
-                                  color: Color.fromARGB(255, 255, 255, 255),
-                                  fontSize: 16,
-                                ),
-                              ),
+                                  text: 'На сайте Купибилет',
+                                  style: AppTextStyle.wite16w600),
                             ],
                           ),
                         ),
@@ -362,13 +304,8 @@ class _PriceChartState extends State<PriceChart> {
                               color: const Color(0xFFF36E36),
                               borderRadius: BorderRadius.circular(30)),
                           child: const Center(
-                            child: Text(
-                              'Купить',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w700),
-                            ),
+                            child:
+                                Text('Купить', style: AppTextStyle.wite18w600),
                           ),
                         )
                       ],

@@ -1,4 +1,4 @@
-import 'package:app_kairov/src/views/home_view/home_page.dart';
+import 'package:app_kairov/src/core/home/home_view/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

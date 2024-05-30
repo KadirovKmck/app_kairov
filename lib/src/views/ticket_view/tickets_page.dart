@@ -1,4 +1,6 @@
-import 'package:app_kairov/src/components/ticket_card_widget/ticket_card.dart';
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
+import 'package:app_kairov/src/core/ui/widgets/ticket_card_widget/ticket_card.dart';
+import 'package:app_kairov/src/views/flight_filters_view/flight_filters_view.dart';
 import 'package:flutter/material.dart';
 
 class Tickets extends StatefulWidget {
@@ -39,24 +41,9 @@ class _TicketsState extends State<Tickets> {
                     SizedBox(
                       height: 5,
                     ),
-                    Text(
-                      'Москва-Сочи',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16,
-                        fontFamily: 'SF Pro Display',
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    Text(
-                      '23 февраля, 1 пассажир',
-                      style: TextStyle(
-                        color: Color(0xFF9E9E9E),
-                        fontSize: 14,
-                        fontFamily: 'SF Pro Display',
-                        fontWeight: FontWeight.w500,
-                      ),
-                    )
+                    Text('Москва-Сочи', style: AppTextStyle.wite16w600),
+                    Text('23 февраля, 1 пассажир',
+                        style: AppTextStyle.wite5014w600)
                   ],
                 ),
               ],
@@ -101,9 +88,14 @@ class _TicketsState extends State<Tickets> {
                 borderRadius: BorderRadius.circular(50),
               ),
             ),
-            child: const Padding(
-              padding: EdgeInsets.all(8.0),
-              child: Row(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FlightFilters()));
+              },
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
@@ -114,15 +106,7 @@ class _TicketsState extends State<Tickets> {
                   SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    'Фильтр',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'SF Pro Display',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
+                  Text('Фильтр', style: AppTextStyle.wite16w600),
                   SizedBox(
                     width: 10,
                   ),
@@ -134,15 +118,7 @@ class _TicketsState extends State<Tickets> {
                   SizedBox(
                     width: 5,
                   ),
-                  Text(
-                    'График цен',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'SF Pro Display',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
+                  Text('График цен', style: AppTextStyle.wite16w600),
                 ],
               ),
             ),

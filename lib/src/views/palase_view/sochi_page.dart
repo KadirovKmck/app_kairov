@@ -1,12 +1,15 @@
-import 'package:app_kairov/src/components/ticket_item_widget/ticket_Item.dart';
+import 'package:app_kairov/src/core/ui/theme/app_decoration.dart';
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
+import 'package:app_kairov/src/core/ui/widgets/ticket_item_widget/ticket_Item.dart';
 import 'package:flutter/material.dart';
-import 'package:app_kairov/src/views/filter_view/filter.dart';
+import 'package:app_kairov/src/views/costom_tabbar/filter.dart';
 import '../ticket_view/tickets_page.dart';
 
 class SochiPage extends StatefulWidget {
   const SochiPage({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _SochiPageState createState() => _SochiPageState();
 }
 
@@ -36,15 +39,7 @@ class _SochiPageState extends State<SochiPage> {
                     const Positioned(
                       left: 40,
                       top: 58,
-                      child: Text(
-                        'Сочи',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'SF Pro Display',
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                      child: Text('Сочи', style: AppTextStyle.wite16w600),
                     ),
                     Center(
                       child: Container(
@@ -69,15 +64,7 @@ class _SochiPageState extends State<SochiPage> {
                     const Positioned(
                       left: 40,
                       top: 14,
-                      child: Text(
-                        'Минск',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                          fontFamily: 'SF Pro Display',
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                      child: Text('Минск', style: AppTextStyle.wite16w600),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 24),
@@ -111,10 +98,7 @@ class _SochiPageState extends State<SochiPage> {
                       padding: const EdgeInsets.all(4.0),
                       child: Container(
                         width: 110,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 72, 71, 71),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
+                        decoration: AppDecoration.blacR30Box4,
                         child: Center(
                           child: Text(
                             texts[index],
@@ -133,12 +117,7 @@ class _SochiPageState extends State<SochiPage> {
             Container(
               height: 304,
               width: 370,
-              decoration: ShapeDecoration(
-                color: const Color(0xFF1D1E20),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16),
-                ),
-              ),
+              decoration: AppDecoration.blac100R30Box4,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
@@ -192,15 +171,8 @@ class _SochiPageState extends State<SochiPage> {
                 height: 60,
                 width: 370,
                 child: const Center(
-                  child: Text(
-                    'Посмотреть все билеты',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontFamily: 'SF Pro Display',
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                  child: Text('Посмотреть все билеты',
+                      style: AppTextStyle.wite16w600),
                 ),
               ),
             ),
@@ -223,14 +195,8 @@ class _SochiPageState extends State<SochiPage> {
                       children: [
                         Icon(Icons.notifications, color: Colors.blue),
                         SizedBox(width: 10),
-                        Text(
-                          'Подписка на цену',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'SF Pro Display',
-                          ),
-                        ),
+                        Text('Подписка на цену',
+                            style: AppTextStyle.wite16w600),
                       ],
                     ),
                     Switch(
@@ -266,7 +232,7 @@ class _SochiPageState extends State<SochiPage> {
   void _navigateToFilterPage() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const Filter()),
+      MaterialPageRoute(builder: (context) => const CostomTabbar()),
     );
   }
 

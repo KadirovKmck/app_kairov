@@ -1,3 +1,4 @@
+import 'package:app_kairov/src/core/ui/theme/app_text_style.dart';
 import 'package:app_kairov/src/views/price_chart_view/price_chart.dart';
 import 'package:flutter/material.dart';
 
@@ -31,14 +32,7 @@ class TicketCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
-              Text(
-                price,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Text(price, style: AppTextStyle.wite22w600),
               const SizedBox(height: 10),
               Row(
                 children: [
